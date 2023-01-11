@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StartProject</string>
+    <string name="but_lang">ع</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="enter_your_email">Enter your Email</string>
+    <string name="enter_your_password">Enter your Password</string>
+    <string name="image" translatable="false">image</string>
+</resources>
