@@ -5,4 +5,8 @@
     <string name="welcome_back">مرحبا بعودتك!</string>
     <string name="enter_your_email">أدخل بريدك الالكترونى</string>
     <string name="enter_your_password">أدخل كلمة المرور</string>
+    <string name="forget_password">نسيت كلمة المرور</string>
+    <string name="login">دخول</string>
+    <string name="don_t_have_an_account">ليس لديك حساب؟</string>
+    <string name="register_new">مستخدم جديد</string>
 </resources>
