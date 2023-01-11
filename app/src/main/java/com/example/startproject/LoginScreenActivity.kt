@@ -15,8 +15,6 @@ class LoginScreenActivity : BaseActivity() {
         changeLanguage()
         handleDirectionPasswordEditText()
 
-
-
     }
 
     private fun changeLanguage() {
