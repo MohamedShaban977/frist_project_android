@@ -12,14 +12,15 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent"
+            tools:ignore="MissingClass">
 
             <Button
                 android:id="@+id/but_lang"
@@ -31,10 +32,10 @@
                 android:elevation="@dimen/cardview_default_elevation"
                 android:fontFamily="@font/cairo"
                 android:foreground="@drawable/but_lang_style"
-                android:text="@string/but_lang"
                 android:gravity="center"
-
                 android:layoutDirection="ltr"
+
+                android:text="@string/but_lang"
                 android:textColor="#9575CD"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -70,45 +71,57 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView"
                 app:srcCompat="@drawable/logo_login" />
 
-            <EditText
-                android:id="@+id/edtxt_email"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:autofillHints="Enter your email"
-                android:background="@drawable/text_input_style"
-                android:fontFamily="@font/cairo"
-app:chainUseRtl="true"
-                app:guidelineUseRtl="true"
-                android:freezesText="true"
-                android:textDirection="locale"
-                android:hint="@string/enter_your_email"
-                android:inputType="textEmailAddress"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
+                android:id="@+id/edtxt_email_layout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
-                app:endIconMode="password_toggle"
-                app:counterEnabled="true"
-
-                app:hintEnabled="false"
                 android:gravity="right|center_vertical"
 
+                app:helperText=""
+                app:helperTextTextColor="@color/red"
+                app:hintEnabled="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtxt_email"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:passwordToggleTint="@color/black"
+                tools:ignore="MissingConstraints,RtlHardcoded">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtxt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:autofillHints="@string/enter_your_email"
+                    android:background="@drawable/text_input_style"
+                    android:fontFamily="@font/cairo"
+                    android:foregroundGravity="center_vertical|center"
+                    android:hint="@string/enter_your_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:textDirection="locale"
+                    tools:ignore="RtlHardcoded" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtxt_password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="right|center_vertical"
+                app:endIconMode="password_toggle"
+                app:helperText=""
+                app:helperTextTextColor="@color/red"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtxt_email_layout"
                 app:passwordToggleTint="@color/black"
                 tools:ignore="MissingConstraints,RtlHardcoded">
 
@@ -118,15 +131,14 @@ app:chainUseRtl="true"
                     android:layout_height="50dp"
                     android:autofillHints="@string/enter_your_password"
 
-
                     android:background="@drawable/text_input_style"
                     android:fontFamily="@font/cairo"
+                    android:foregroundGravity="center_vertical|center"
+                    android:gravity="right|center_vertical"
                     android:hint="@string/enter_your_password"
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:paddingStart="20dp"
-                    android:foregroundGravity="center_vertical|center"
-android:gravity="right|center_vertical"
                     android:paddingEnd="20dp"
                     android:textDirection="locale"
                     tools:ignore="RtlHardcoded" />
@@ -147,7 +159,7 @@ android:gravity="right|center_vertical"
                 android:textColor="#7C4DFF"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/edtxt_password_layout" />
 
             <Button
                 android:id="@+id/but_login"
@@ -170,6 +182,7 @@ android:gravity="right|center_vertical"
 
 
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -204,6 +217,20 @@ android:gravity="right|center_vertical"
                     tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
 
+            <include
+                android:id="@+id/activity_main_btn"
+                layout="@layout/btn_loading_layout"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayout" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
