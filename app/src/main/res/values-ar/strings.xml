@@ -10,4 +10,8 @@
     <string name="don_t_have_an_account">ليس لديك حساب؟</string>
     <string name="register_new">مستخدم جديد</string>
     <string name="email_is_empty">البريد الالكترونى فارع</string>
+    <string name="general_toast">General toast</string>
+    <string name="list">List</string>
+    <string name="recycler_view">Recycler view</string>
+    <string name="web">Web</string>
 </resources>

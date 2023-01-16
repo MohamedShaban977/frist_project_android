@@ -1,42 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:elevation="2dp"
-    android:gravity="center"
-    android:background="@drawable/but_base_style"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/but_base_style"
+    android:clickable="true"
+    android:elevation="2dp"
+    android:focusable="true"
+    android:gravity="center"
+    tools:ignore="DuplicateClickableBoundsCheck">
 
     <LinearLayout
-        android:padding="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp">
+
         <ProgressBar
             android:id="@+id/btn_loading_layout_progressbar"
-            android:visibility="gone"
-            android:indeterminateTint="@color/purple_200"
-            android:layout_width="30dp"
-            android:layout_height="30dp"/>
-        <ImageView
-            android:visibility="gone"
-            android:id="@+id/btn_loading_layout_iv"
-            android:background="@drawable/btn_loading_layout_iv"
-            android:src="@drawable/ic_done"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:contentDescription="@string/image" />
+            android:indeterminateTint="@color/purple_200"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/btn_loading_layout_iv"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_loading_layout_iv"
+            android:contentDescription="@string/image"
+            android:src="@drawable/ic_done"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/btn_loading_layout_tv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:fontFamily="@font/cairo"
+            android:gravity="center"
             android:inputType="text"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:text="@string/login"
             android:textColor="#9575CD"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
             tools:ignore="TextViewEdits,UnusedAttribute" />
     </LinearLayout>
 

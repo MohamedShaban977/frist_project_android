@@ -10,4 +10,8 @@
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="register_new">Register new</string>
     <string name="email_is_empty">Email Address is empty</string>
+    <string name="general_toast">General toast</string>
+    <string name="list">List</string>
+    <string name="recycler_view">Recycler view</string>
+    <string name="web">Web</string>
 </resources>
